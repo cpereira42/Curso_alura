@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/registerUserFragment">
+
+    <fragment
+        android:id="@+id/emptyKeyFragment"
+        android:name="com.warren.keypix.view.EmptyKeyFragment"
+        android:label="Chave Pix"
+        tools:layout="@layout/fragment_empty_key" >
+        <action
+            android:id="@+id/action_newKeyFragment"
+            app:destination="@id/newKeyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newKeyFragment"
+        android:name="com.warren.keypix.view.NewKeyFragment"
+        android:label="Cadastrar chave Pix"
+        tools:layout="@layout/fragment_new_key" >
+        <action
+            android:id="@+id/action_registerEmailFragment"
+            app:destination="@id/registerEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.warren.keypix.view.OnBoardingFragment"
+        android:label="Chave Pix"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_emptyKeyFragment"
+            app:destination="@id/emptyKeyFragment" />
+        <action
+            android:id="@+id/action_newKeyFragment"
+            app:destination="@id/newKeyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerEmailFragment"
+        android:name="com.warren.keypix.view.RegisterEmailFragment"
+        android:label="Cadastrar chave Pix"
+        tools:layout="@layout/fragment_register_email"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.warren.login.view.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        >
+        <action
+            android:id="@+id/action_registerUserFragment"
+            app:destination="@id/registerUserFragment" />
+        <action
+            android:id="@+id/action_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerUserFragment"
+        android:name="com.warren.login.view.RegisterUserFragment"
+        android:label="RegisterUserFragment"
+        tools:layout="@layout/fragment_register_user">
+    </fragment>
+
+</navigation>
